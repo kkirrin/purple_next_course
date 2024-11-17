@@ -3,6 +3,17 @@ import styles from './page.module.css';
 
 export default function Home(): JSX.Element {
 
+	interface User {
+		name: string;
+        age: number;
+	}
+	const user: User = {
+		'name': 'John',
+		'age': 30
+	};
+
+	user.name = 'Kirill';
+
 	return (
 		<div className={styles.page}>
 
