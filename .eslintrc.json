@@ -1,12 +1,13 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
    "rules": {
-    "semi": ["error", "always",
+    "semi": ["warn", "always",
       {
         "omitLastInOneLineBlock": false
       }],
     "comma-dangle": ["error", "never"],
     // "quotes": ["error", "single"],
-    "indent": ["error", "tab"]
+    "indent": ["error", "tab"],
+   
   }
 }

@@ -13,7 +13,8 @@ export default function Home(): JSX.Element {
 		age: 23
 	};
 
-	console.log(user.name = 'ggg');
+
+	
 
 	return (
 		<div className={styles.page}>
