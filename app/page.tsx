@@ -1,5 +1,19 @@
 import Image from 'next/image';
 import styles from './page.module.css';
+import { Metadata } from 'next';
+
+
+// export const metadata: Metadata = {
+// 	title:  'Главная страница',
+// 	description: ' Новое описание проекта'
+// }
+
+
+export async function generateMetadata(): Promise<Metadata> {
+	return {
+		title: 'ComputedMeda'
+	}
+}
 
 export default function Home(): JSX.Element {
 
