@@ -37,5 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Для работы с SVG файлами
 
-1. https://react-svgr.com/docs/next/
-2. В
+1. https://www.mridul.tech/blogs/how-to-use-svg-in-next-js
