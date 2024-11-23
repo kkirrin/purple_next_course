@@ -29,7 +29,7 @@ export default function Home(): JSX.Element {
 		<>
 			<Htag tag="h1">Text</Htag>
 			<Button appearance='primary'>Watch all</Button>
-			<Button appearance='ghost'>Button</Button>
+			<Button appearance='ghost' arrow='up'>Button</Button>
 			<Button appearance='primary' arrow='down'>More btn</Button>
 
 
