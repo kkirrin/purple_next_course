@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import { Metadata } from 'next';
 import { Button, Htag, Ptag, Tag } from './components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,6 +25,28 @@ export default function Home(): JSX.Element {
 
 
 	const [counter, setCounter] = useState<number>(0);
+
+	useEffect(() => {
+		// Без массива зависимостей данная логика будет каждый раз рендеринге
+		console.log('Counter ' + counter);
+		return function cleanup() {
+			console.log('Unmount');
+		}
+	});
+
+	useEffect(() => {
+		// C пустым массивом зависимостей данная логика будет срабатывать каждый раз при первичном рендеринге
+		console.log('Counter ' + counter);
+		// Тут тоже каждый раз
+		return function cleanup() {
+			console.log('Unmount');
+		}
+	});
+
+	useEffect(() => {
+		// C пустым массивом зависимостей данная логика будет срабатывать каждый раз при первичном рендеринге
+		console.log('Mounted');
+	}, []);
 
 	return (
 		<>
