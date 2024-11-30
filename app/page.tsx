@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import { Metadata } from 'next';
 import { Button, Htag, Ptag, Tag } from './components';
+import { useState } from 'react';
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -23,11 +24,12 @@ export default function Home(): JSX.Element {
 	};
 
 
-	
+	const [counter, setCounter] = useState<number>(0);
 
 	return (
 		<>
-			<Htag tag="h1">Text</Htag>
+			<Htag tag="h1">{counter}</Htag>
+			<Button appearance='primary' arrow='up' onClick={() => setCounter(x => x + 1)}>Увеличить на 1</Button>
 			<Button appearance='primary'>Watch all</Button>
 			<Button appearance='ghost' arrow='up'>Button</Button>
 			<Button appearance='primary' arrow='down'>More btn</Button>
@@ -36,6 +38,9 @@ export default function Home(): JSX.Element {
 			<Tag size='medium' color='gray'>ТЕГ</Tag>
 			<Tag size='medium' color='red'>ТЕГ</Tag>
 			<Tag size='medium' color="green">ТЕГ</Tag>
+
+
+
 		</>
 
 
