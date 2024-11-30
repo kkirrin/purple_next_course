@@ -1,17 +1,17 @@
-
+"use client"
 
 import Image from 'next/image';
 import styles from './page.module.css';
 import { Metadata } from 'next';
 import { Button, Htag, Ptag, Rating, Tag } from './components';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
-export async function generateMetadata(): Promise<Metadata> {
-	return {
-		title: 'ComputedMeda'
-	}
-}
+// export async function generateMetadata(): Promise<Metadata> {
+// 	return {
+// 		title: 'ComputedMeda'
+// 	}
+// }
 
 export default function Home(): JSX.Element {
 
@@ -50,6 +50,8 @@ export default function Home(): JSX.Element {
 	// 	console.log('Mounted');
 	// }, []);
 
+	const [rating, setRating] = useState<number>(2);
+
 	return (
 		<>
 			{/* <Htag tag="h1">{counter}</Htag> */}
@@ -63,7 +65,7 @@ export default function Home(): JSX.Element {
 			<Tag size='medium' color='red'>ТЕГ</Tag>
 			<Tag size='medium' color="green">ТЕГ</Tag>
 
-			<Rating rating={4}/>
+			<Rating isEditable={true} rating={rating} setRating={setRating}/> 
 
 
 
