@@ -1,8 +1,10 @@
+
+
 import Image from 'next/image';
 import styles from './page.module.css';
 import { Metadata } from 'next';
-import { Button, Htag, Ptag, Tag } from './components';
-import { useEffect, useState } from 'react';
+import { Button, Htag, Ptag, Rating, Tag } from './components';
+// import { useEffect, useState } from 'react';
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,34 +26,34 @@ export default function Home(): JSX.Element {
 	};
 
 
-	const [counter, setCounter] = useState<number>(0);
+	// const [counter, setCounter] = useState<number>(0);
 
-	useEffect(() => {
-		// Без массива зависимостей данная логика будет каждый раз рендеринге
-		console.log('Counter ' + counter);
-		return function cleanup() {
-			console.log('Unmount');
-		}
-	});
+	// useEffect(() => {
+	// 	// Без массива зависимостей данная логика будет каждый раз рендеринге
+	// 	console.log('Counter ' + counter);
+	// 	return function cleanup() {
+	// 		console.log('Unmount');
+	// 	}
+	// });
 
-	useEffect(() => {
-		// C пустым массивом зависимостей данная логика будет срабатывать каждый раз при первичном рендеринге
-		console.log('Counter ' + counter);
-		// Тут тоже каждый раз
-		return function cleanup() {
-			console.log('Unmount');
-		}
-	});
+	// useEffect(() => {
+	// 	// C пустым массивом зависимостей данная логика будет срабатывать каждый раз при первичном рендеринге
+	// 	console.log('Counter ' + counter);
+	// 	// Тут тоже каждый раз
+	// 	return function cleanup() {
+	// 		console.log('Unmount');
+	// 	}
+	// });
 
-	useEffect(() => {
-		// C пустым массивом зависимостей данная логика будет срабатывать каждый раз при первичном рендеринге
-		console.log('Mounted');
-	}, []);
+	// useEffect(() => {
+	// 	// C пустым массивом зависимостей данная логика будет срабатывать каждый раз при первичном рендеринге
+	// 	console.log('Mounted');
+	// }, []);
 
 	return (
 		<>
-			<Htag tag="h1">{counter}</Htag>
-			<Button appearance='primary' arrow='up' onClick={() => setCounter(x => x + 1)}>Увеличить на 1</Button>
+			{/* <Htag tag="h1">{counter}</Htag> */}
+			{/* <Button appearance='primary' arrow='up' onClick={() => setCounter(x => x + 1)}>Увеличить на 1</Button> */}
 			<Button appearance='primary'>Watch all</Button>
 			<Button appearance='ghost' arrow='up'>Button</Button>
 			<Button appearance='primary' arrow='down'>More btn</Button>
@@ -60,6 +62,8 @@ export default function Home(): JSX.Element {
 			<Tag size='medium' color='gray'>ТЕГ</Tag>
 			<Tag size='medium' color='red'>ТЕГ</Tag>
 			<Tag size='medium' color="green">ТЕГ</Tag>
+
+			<Rating rating={4}/>
 
 
 
