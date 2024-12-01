@@ -54,9 +54,12 @@ export default function Home(): JSX.Element {
 
 	return (
 		<>
+			<div className={styles.main}>
+				Главная страница
+			</div>
 			{/* <Htag tag="h1">{counter}</Htag> */}
 			{/* <Button appearance='primary' arrow='up' onClick={() => setCounter(x => x + 1)}>Увеличить на 1</Button> */}
-			<Button appearance='primary'>Watch all</Button>
+			{/* <Button appearance='primary'>Watch all</Button>
 			<Button appearance='ghost' arrow='up'>Button</Button>
 			<Button appearance='primary' arrow='down'>More btn</Button>
 			<Ptag size='xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio quod et at quam. Obcaecati voluptas ullam molestias omnis. Obcaecati alias, at esse aliquam minima natus nesciunt molestias hic perferendis?</Ptag>
@@ -66,7 +69,7 @@ export default function Home(): JSX.Element {
 			<Tag size='medium' color="green">ТЕГ</Tag>
 
 			<Rating isEditable={true} rating={rating} setRating={setRating}/> 
-
+ */}
 
 
 		</>
