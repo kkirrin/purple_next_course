@@ -1,6 +1,6 @@
 import React from "react"
 
-export default async function Page({
+export default async function AbouySingle({
   params,
 }: {
   params: Promise<{ slug: string }>

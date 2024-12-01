@@ -3,15 +3,8 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 import { Metadata } from 'next';
-import { Button, Htag, Ptag, Rating, Tag } from './components';
+import { Button, Htag, Ptag, Rating, Tag } from '../components';
 import { useEffect, useState } from 'react';
-
-
-// export async function generateMetadata(): Promise<Metadata> {
-// 	return {
-// 		title: 'ComputedMeda'
-// 	}
-// }
 
 export default function Home(): JSX.Element {
 
