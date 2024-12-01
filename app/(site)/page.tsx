@@ -6,6 +6,8 @@ import { Metadata } from 'next';
 import { Button, Htag, Ptag, Rating, Tag } from '../components';
 import { useEffect, useState } from 'react';
 
+import { Layout } from '../layout/Layout';
+
 export default function Home(): JSX.Element {
 
 	interface User {
@@ -46,7 +48,7 @@ export default function Home(): JSX.Element {
 	const [rating, setRating] = useState<number>(2);
 
 	return (
-		<>
+		<Layout>
 			<div className={styles.main}>
 				Главная страница
 			</div>
@@ -65,7 +67,7 @@ export default function Home(): JSX.Element {
  */}
 
 
-		</>
+		</Layout>
 
 
 	);
