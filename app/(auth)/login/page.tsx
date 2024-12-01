@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 export default function Login(): JSX.Element {
     return (
         <>
-        <div>
-            Авторизация
-        </div>
+            <div>
+                Авторизация
+            </div>
         </>
     )
 }
